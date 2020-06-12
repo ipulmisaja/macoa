@@ -19,10 +19,14 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ipulmisaja\\Macoa\\Providers\\MacoaServiceProvider"
+                "Ipulmisaja\\Macoa\\Providers\\AuthenticationServiceProvider",
+                "Ipulmisaja\\Macoa\\Providers\\DateFormatServiceProvider",
+                "Ipulmisaja\\Macoa\\Providers\\PaginationServiceProvider",
+                "Ipulmisaja\\Macoa\\Providers\\PassportServiceProvider"
             ],
             "aliases": {
-                "FormatTanggal": "Ipulmisaja\\Macoa\\Helpers\\DateFormat"
+                "DateFormat": "Ipulmisaja\\Macoa\\Helpers\\DateFormat",
+                "Pagination": "Ipulmisaja\\Macoa\\Helpers\\Pagination"
             }
         }
     }

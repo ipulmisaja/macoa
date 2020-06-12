@@ -4,7 +4,7 @@ namespace Ipulmisaja\Macoa\Helpers;
 
 use GuzzleHttp\Client;
 
-class Macoa
+class Passport
 {
     public function post(String $endpoint, array $params)
     {
