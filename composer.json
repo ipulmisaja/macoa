@@ -1,0 +1,26 @@
+{
+    "name": "ipulmisaja/macoa",
+    "description": "Plugin sederhana untuk Laravel Framework.",
+    "require": {
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Syaifur Rijal",
+            "email": "syaifur.rijal@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ipulmisaja\\Macoa\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ipulmisaja\\Macoa\\Providers\\MacoaServiceProvider"
+            ]
+        }
+    }
+}
