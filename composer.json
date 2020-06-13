@@ -1,9 +1,6 @@
 {
     "name": "ipulmisaja/macoa",
     "description": "Plugin sederhana untuk Laravel Framework.",
-    "require": {
-        "guzzlehttp/guzzle": "^6.5"
-    },
     "license": "MIT",
     "authors": [
         {
@@ -21,8 +18,7 @@
             "providers": [
                 "Ipulmisaja\\Macoa\\Providers\\AuthenticationServiceProvider",
                 "Ipulmisaja\\Macoa\\Providers\\DateFormatServiceProvider",
-                "Ipulmisaja\\Macoa\\Providers\\PaginationServiceProvider",
-                "Ipulmisaja\\Macoa\\Providers\\PassportServiceProvider"
+                "Ipulmisaja\\Macoa\\Providers\\PaginationServiceProvider"
             ],
             "aliases": {
                 "DateFormat": "Ipulmisaja\\Macoa\\Helpers\\DateFormat",
