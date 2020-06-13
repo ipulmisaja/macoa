@@ -8,7 +8,7 @@
  * @link     https://git.bps.go.id/aditya.sudyana/php-plugin-bps-community
  */
 
-namespace Statsulbar\BPSAuth\Helpers;
+namespace Ipulmisaja\Macoa\Helpers;
 
 use Illuminate\Support\Facades\Storage;
 
