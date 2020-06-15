@@ -18,11 +18,13 @@
             "providers": [
                 "Ipulmisaja\\Macoa\\Providers\\AuthenticationServiceProvider",
                 "Ipulmisaja\\Macoa\\Providers\\DateFormatServiceProvider",
-                "Ipulmisaja\\Macoa\\Providers\\PaginationServiceProvider"
+                "Ipulmisaja\\Macoa\\Providers\\PaginationServiceProvider",
+                "Ipulmisaja\\Macoa\\Providers\\FileSizeServiceProvider"
             ],
             "aliases": {
                 "DateFormat": "Ipulmisaja\\Macoa\\Helpers\\DateFormat",
-                "Pagination": "Ipulmisaja\\Macoa\\Helpers\\Pagination"
+                "Pagination": "Ipulmisaja\\Macoa\\Helpers\\Pagination",
+                "FileSize": "Ipulmisaja\\Macoa\\Helpers\\FileSize"
             }
         }
     }
