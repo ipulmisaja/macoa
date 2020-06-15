@@ -12,6 +12,6 @@ class FileSize
     public static function convert($filesize)
     {
         $i = floor(log($filesize) / log(1024));
-        return number_format(($filesize / pow(1024, $i)), 2, ',') . ' ' . ['B', 'kB', 'MB', 'GB', 'TB'][$i];
+        return number_format(($filesize / pow(1024, $i)), 2) . ' ' . ['B', 'kB', 'MB', 'GB', 'TB'][$i];
     }
 }
