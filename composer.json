@@ -16,7 +16,6 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ipulmisaja\\Macoa\\Providers\\AuthenticationServiceProvider",
                 "Ipulmisaja\\Macoa\\Providers\\DateFormatServiceProvider",
                 "Ipulmisaja\\Macoa\\Providers\\PaginationServiceProvider",
                 "Ipulmisaja\\Macoa\\Providers\\FileSizeServiceProvider"
