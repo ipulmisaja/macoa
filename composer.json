@@ -18,12 +18,14 @@
             "providers": [
                 "Ipulmisaja\\Macoa\\Providers\\DateFormatServiceProvider",
                 "Ipulmisaja\\Macoa\\Providers\\PaginationServiceProvider",
-                "Ipulmisaja\\Macoa\\Providers\\FileSizeServiceProvider"
+                "Ipulmisaja\\Macoa\\Providers\\FileSizeServiceProvider",
+                "Ipulmisaja\\Macoa\\Providers\\IdGeneratorServiceProvider"
             ],
             "aliases": {
                 "DateFormat": "Ipulmisaja\\Macoa\\Helpers\\DateFormat",
                 "Pagination": "Ipulmisaja\\Macoa\\Helpers\\Pagination",
-                "FileSize": "Ipulmisaja\\Macoa\\Helpers\\FileSize"
+                "FileSize": "Ipulmisaja\\Macoa\\Helpers\\FileSize",
+                "IdGenerator": "Ipulmisaja\\Macoa\\Helpers\\IdGenerator"
             }
         }
     }
