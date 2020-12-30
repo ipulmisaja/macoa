@@ -65,6 +65,7 @@ class IdGenerator
         preg_match("/^([\w\-]+)/", $fieldType, $type);
         $tableFieldType = $type[0];
         preg_match("/(?<=\().+?(?=\))/", $fieldType, $tblFieldLength);
+        dd($tableFieldLength);
         $tableFieldLength = $tblFieldLength[0];
 
         if (in_array($tableFieldType, ['int', 'bigint', 'numeric']) && !is_numeric($prefix)) {
