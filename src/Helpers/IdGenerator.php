@@ -12,7 +12,7 @@ class IdGenerator
             $colsType = DB::select('describe ' . $table) :
             $colsType = DB::select(
                             DB::raw(
-                                "SELECT table_name, column_name, data_type
+                                "SELECT column_name as Field, data_type as Type
                                 FROM information_schema.columns
                                 WHERE table_name = '" . $table . "'"
                             )
