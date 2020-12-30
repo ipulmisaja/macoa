@@ -62,7 +62,8 @@ class IdGenerator
         $length = $configArr['length'];
 
         $fieldType = (new self)->getFieldType($table, $field);
-        dd(preg_match("/^([\w\-]+)/", $fieldType, $type));
+        preg_match("/^([\w\-]+)/", $fieldType, $type);
+        dd($type[0]);
         $tableFieldType = $type[0];
         preg_match("/(?<=\().+?(?=\))/", $fieldType, $tblFieldLength);
         $tableFieldLength = $tblFieldLength[0];
