@@ -12,16 +12,23 @@ class IdGenerator
             $colsType = DB::select('describe ' . $table) :
             $colsType = DB::select(
                             DB::raw(
-                                "SELECT column_name as Field, data_type as Type
+                                "SELECT column_name as field, data_type as type
                                 FROM information_schema.columns
                                 WHERE table_name = '" . $table . "'"
                             )
                         );
         $fieldType = null;
         foreach ($colsType as $col) {
-            if ($field == $col->Field) {
-                $fieldType = $col->Type;
-                break;
+            if(env('DB_CONNECTION') === 'mysql') {
+                if ($field == $col->Field) {
+                    $fieldType = $col->Type;
+                    break;
+                }
+            } else {
+                if ($field == $col->field) {
+                    $fieldType = $col->type;
+                    break;
+                }
             }
         }
 
