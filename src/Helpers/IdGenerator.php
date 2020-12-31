@@ -99,7 +99,9 @@ class IdGenerator
             }
 
             $queryResult = DB::select($maxQuery);
-            $maxFullId = $queryResult[0]->maxId;
+            env('DB_CONNECTION') === 'mysql' ?
+              $maxFullId = $queryResult[0]->maxId :
+              $maxFullId = $queryResult[0]->maxid;
 
             $maxId = substr($maxFullId, $prefixLength, $idLength);
             return $prefix . str_pad($maxId + 1, $idLength, '0', STR_PAD_LEFT);
