@@ -12,7 +12,7 @@ class IdGenerator
             $colsType = DB::select('describe ' . $table) :
             $colsType = DB::select(
                             DB::raw(
-                                "SELECT column_name as field, data_type as type
+                                "SELECT column_name as field, data_type as type, character_maximum_length as length
                                 FROM information_schema.columns
                                 WHERE table_name = '" . $table . "'"
                             )
@@ -26,7 +26,7 @@ class IdGenerator
                 }
             } else {
                 if ($field == $col->field) {
-                    $fieldType = $col->type;
+                    $fieldType = $col->type.'('. $col->length .')';
                     break;
                 }
             }
@@ -65,7 +65,6 @@ class IdGenerator
         preg_match("/^([\w\-]+)/", $fieldType, $type);
         $tableFieldType = $type[0];
         preg_match("/(?<=\().+?(?=\))/", $fieldType, $tblFieldLength);
-        dd($tblFieldLength[0]);
         $tableFieldLength = $tblFieldLength[0];
 
         if (in_array($tableFieldType, ['int', 'bigint', 'numeric']) && !is_numeric($prefix)) {
