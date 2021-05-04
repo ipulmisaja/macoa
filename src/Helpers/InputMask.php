@@ -4,7 +4,7 @@ namespace Ipulmisaja\Macoa\Helpers;
 
 use Ipulmisaja\Macoa\Dependencies\InputMask\Stripper;
 
-class Mask
+class InputMask
 {
     public static function mask($target, $pattern)
     {
